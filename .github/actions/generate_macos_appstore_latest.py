@@ -35,106 +35,53 @@ def get_current_date_time():
 last_update_date_time = get_current_date_time()
 logging.info(f"Current date and time: {last_update_date_time}")
 
+# Define common keys
+common_keys = {
+    "application_name": "trackName",
+    "bundleId": "bundleId",
+    "version": "version",
+    "currentVersionReleaseDate": "currentVersionReleaseDate",
+    "releaseNotes": "releaseNotes",
+    "minimumOsVersion": "minimumOsVersion"
+}
+
 # Define app-specific configurations
 apps = {
     "MacOS Microsoft Word": {
         "url": "https://itunes.apple.com/search?term=microsoft-word&country=us&entity=macSoftware",
-        "keys": {
-            "application_name": "trackName",
-            "bundleId": "bundleId",
-            "version": "version",
-            "currentVersionReleaseDate": "currentVersionReleaseDate",
-            "releaseNotes": "releaseNotes",
-            "minimumOsVersion": "minimumOsVersion"
-        }
+        "keys": common_keys
     },
     "MacOS Microsoft Excel": {
         "url": "https://itunes.apple.com/search?term=microsoft-excel&country=us&entity=macSoftware",
-        "keys": {
-            "application_name": "trackName",
-            "bundleId": "bundleId",
-            "version": "version",
-            "currentVersionReleaseDate": "currentVersionReleaseDate",
-            "releaseNotes": "releaseNotes",
-            "minimumOsVersion": "minimumOsVersion"
-        }
+        "keys": common_keys
     },
     "MacOS Microsoft PowerPoint": {
         "url": "https://itunes.apple.com/search?term=microsoft-powerpoint&country=us&entity=macSoftware",
-        "keys": {
-            "application_name": "trackName",
-            "bundleId": "bundleId",
-            "version": "version",
-            "currentVersionReleaseDate": "currentVersionReleaseDate",
-            "releaseNotes": "releaseNotes",
-            "minimumOsVersion": "minimumOsVersion"
-        }
+        "keys": common_keys
     },
     "MacOS Microsoft Outlook": {
         "url": "https://itunes.apple.com/search?term=microsoft-outlook&country=us&entity=macSoftware",
-        "keys": {
-            "application_name": "trackName",
-            "bundleId": "bundleId",
-            "version": "version",
-            "currentVersionReleaseDate": "currentVersionReleaseDate",
-            "releaseNotes": "releaseNotes",
-            "minimumOsVersion": "minimumOsVersion"
-        }
+        "keys": common_keys
     },
     "MacOS Microsoft OneNote": {
         "url": "https://itunes.apple.com/search?term=microsoft-onenote&country=us&entity=macSoftware",
-        "keys": {
-            "application_name": "trackName",
-            "bundleId": "bundleId",
-            "version": "version",
-            "currentVersionReleaseDate": "currentVersionReleaseDate",
-            "releaseNotes": "releaseNotes",
-            "minimumOsVersion": "minimumOsVersion"
-        }
+        "keys": common_keys
     },
     "MacOS Microsoft OneDrive": {
         "url": "https://itunes.apple.com/search?term=microsoft-onedrive&country=us&entity=macSoftware",
-        "keys": {
-            "application_name": "trackName",
-            "bundleId": "bundleId",
-            "version": "version",
-            "currentVersionReleaseDate": "currentVersionReleaseDate",
-            "releaseNotes": "releaseNotes",
-            "minimumOsVersion": "minimumOsVersion"
-        }
+        "keys": common_keys
     },
     "MacOS Microsoft Windows App": {
         "url": "https://itunes.apple.com/search?term=windows-app&country=us&entity=macSoftware",
-        "keys": {
-            "application_name": "trackName",
-            "bundleId": "bundleId",
-            "version": "version",
-            "currentVersionReleaseDate": "currentVersionReleaseDate",
-            "releaseNotes": "releaseNotes",
-            "minimumOsVersion": "minimumOsVersion"
-        }
+        "keys": common_keys
     },
     "MacOS Microsoft To-Do": {
         "url": "https://itunes.apple.com/search?term=microsoft-to-do&country=us&entity=macSoftware",
-        "keys": {
-            "application_name": "trackName",
-            "bundleId": "bundleId",
-            "version": "version",
-            "currentVersionReleaseDate": "currentVersionReleaseDate",
-            "releaseNotes": "releaseNotes",
-            "minimumOsVersion": "minimumOsVersion"
-        }
+        "keys": common_keys
     },
     "MacOS Microsoft Azure VPN Client  ": {
         "url": "https://itunes.apple.com/search?term=azure-vpn-client&country=us&entity=macSoftware",
-        "keys": {
-            "application_name": "trackName",
-            "bundleId": "bundleId",
-            "version": "version",
-            "currentVersionReleaseDate": "currentVersionReleaseDate",
-            "releaseNotes": "releaseNotes",
-            "minimumOsVersion": "minimumOsVersion"
-        }
+        "keys": common_keys
     }
 }
 
