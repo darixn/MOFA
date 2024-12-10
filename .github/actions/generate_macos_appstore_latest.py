@@ -42,7 +42,8 @@ common_keys = {
     "version": "version",
     "currentVersionReleaseDate": "currentVersionReleaseDate",
     "releaseNotes": "releaseNotes",
-    "minimumOsVersion": "minimumOsVersion"
+    "minimumOsVersion": "minimumOsVersion",
+    "icon_image": "artworkurl512"
 }
 
 # Define app-specific configurations
