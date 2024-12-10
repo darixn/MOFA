@@ -6,7 +6,7 @@ import logging
 from xml.dom.minidom import parseString
 import pytz
 import yaml
-from collections import defaultdict
+from collections import defaultdict, OrderedDict
 
 # Configure logging with a cleaner and more human-readable format
 logging.basicConfig(
@@ -43,7 +43,7 @@ common_keys = {
     "currentVersionReleaseDate": "currentVersionReleaseDate",
     "releaseNotes": "releaseNotes",
     "minimumOsVersion": "minimumOsVersion",
-    "icon_image": "artworkurl512"
+    "icon_image": "artworkUrl512"
 }
 
 # Define app-specific configurations
@@ -226,7 +226,8 @@ def create_xml(apps):
         app_data = fetch_app_data(app_info["url"])
         package = ET.SubElement(root, "package")
         ET.SubElement(package, "name").text = app_name
-        for key, json_key in app_info["keys"].items():
+        for key in ["application_name", "bundleId", "currentVersionReleaseDate", "icon_image", "minimumOsVersion", "releaseNotes", "version"]:
+            json_key = app_info["keys"][key]
             value = app_data.get(json_key, "N/A")
             if key == "currentVersionReleaseDate" and value != "N/A":
                 value = format_date(value)
@@ -273,22 +274,38 @@ def xml_to_json_and_yaml(xml_file):
     last_updated = data_dict['latest']['last_updated']
     packages = []
     for package in data_dict['latest']['package']:
-        package_data = package.copy()
+        package_data = OrderedDict()
+        package_data['name'] = package['name']
+        package_data['application_name'] = package['application_name']
+        package_data['bundleId'] = package['bundleId']
+        package_data['currentVersionReleaseDate'] = package['currentVersionReleaseDate']
+        package_data['icon_image'] = package['icon_image']
+        package_data['minimumOsVersion'] = package['minimumOsVersion']
+        package_data['releaseNotes'] = package['releaseNotes']
+        package_data['version'] = package['version']
         packages.append(package_data)
 
-    output_data = {
-        'last_updated': last_updated,
-        'packages': packages
-    }
+    output_data = OrderedDict()
+    output_data['last_updated'] = last_updated
+    output_data['packages'] = packages
 
     # Convert to JSON
     with open("ios_appstore_latest.json", "w", encoding="utf-8") as json_file:
         json.dump(output_data, json_file, indent=4)
     logging.info("JSON file created successfully")
 
-    # Convert to YAML
+    # Convert to YAML using PyYAML with OrderedDict
+    class OrderedDumper(yaml.Dumper):
+        def increase_indent(self, flow=False, indentless=False):
+            return super(OrderedDumper, self).increase_indent(flow, False)
+
+    def dict_representer(dumper, data):
+        return dumper.represent_dict(data.items())
+
+    yaml.add_representer(OrderedDict, dict_representer, Dumper=OrderedDumper)
+
     with open("ios_appstore_latest.yaml", "w", encoding="utf-8") as yaml_file:
-        yaml.dump(output_data, yaml_file, default_flow_style=False)
+        yaml.dump(output_data, yaml_file, Dumper=OrderedDumper, default_flow_style=False, sort_keys=False)
     logging.info("YAML file created successfully")
 
 create_xml(apps)
