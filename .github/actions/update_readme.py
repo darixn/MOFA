@@ -217,6 +217,11 @@ I’m not here to make a profit—just here to ensure knowledge remains open and
 | **InTune Company Portal Standalone Installer**<br><a href="https://aka.ms/intuneupdates" style="text-decoration: none;"><small>_Release Notes_</small></a> | `{get_standalone_package_detail(packages, 'Intune', 'short_version')}` | No MAU | <a href="{get_standalone_package_detail(packages, 'Intune', 'update_download')}"><img src=".github/images/companyportal.png" alt="Download Image" width="80"></a> |
 | **Outlook** <sup>365/2021/2024</sup> **Standalone Installer**<sup>_(Monthly Channel)_</sup>| `N/A - Check Release Notes` | Contains MAU | <a href="https://go.microsoft.com/fwlink/?linkid=525137"><img src=".github/images/Outlook_512x512x32.png" alt="Download Image" width="80"></a>|
 
+| **Oldest Supported macOS** | **File Name** | **Version** | **Download** |
+|---------------------------|----------------|-------------|--------------|
+| macOS 12.7.* Monterey<br><img src=".github/images/MacOS_Monterey_logo.png" alt="macOS Icon" width="20"> | Microsoft 365/2021/2024 Office Suite Installer<br><a href="https://learn.microsoft.com/en-us/officeupdates/release-notes-office-for-mac" style="text-decoration: none;"><small>_Release Notes_</small></a><br><sub>_(Includes Word, Excel, PowerPoint, Outlook, OneNote, OneDrive, and MAU)_</sub> | `16.88` | <a href="https://officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_365_and_Office_16.88.24081116_Installer.pkg"><img src=".github/images/suite.png" alt="Download Image" width="20"></a> |
+| macOS 12.7.* Monterey<br><img src=".github/images/MacOS_Monterey_logo.png" alt="macOS Icon" width="20"> | Microsoft 365/2021/2024 BusinessPro Suite Installer<br><sub>_(Includes Word, Excel, PowerPoint, Outlook, OneNote, OneDrive, Teams, Defender Shim, and MAU)_</sub> | `16.88` | <a href="https://officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_365_and_Office_16.88.24081116_BusinessPro_Installer.pkg"><img src=".github/images/suite.png" alt="Download Image" width="20"></a> |
+
 
 |      Update History                   |          Microsoft Update Channels               |
 |-------------------------|-------------------------|
