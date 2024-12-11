@@ -102,7 +102,7 @@ apps = {
         "keys": common_keys
     },
     "iOS Microsoft Lists": {
-        "url": "https://itunes.apple.com/search?term=microsoft-warehouse-lists&country=us&entity=software",
+        "url": "https://itunes.apple.com/search?term=microsoft-lists&country=us&entity=software",
         "keys": common_keys
     },
     "iOS Microsoft Dynamics 365 Field Service": {
