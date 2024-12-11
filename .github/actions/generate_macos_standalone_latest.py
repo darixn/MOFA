@@ -450,28 +450,26 @@ def fetch_and_process(app_name, config):
         if app_name == "OneDrive":
             extracted_data["last_updated"] = last_update_date_time  # Use current date and time as last_updated
 
-        # Check if last_updated has changed or if sha1 or sha256 are "N/A"
+        # Check if any field has changed or if sha1 or sha256 are "N/A"
         if app_name in existing_data:
-            existing_last_updated = existing_data[app_name]["last_updated"]
-            existing_sha1 = existing_data[app_name]["data"].get("sha1", "N/A")
-            existing_sha256 = existing_data[app_name]["data"].get("sha256", "N/A")
-            extracted_last_updated = extracted_data.get("last_updated", "N/A")
-            extracted_sha1 = extracted_data.get("sha1", "N/A")
-            extracted_sha256 = extracted_data.get("sha256", "N/A")
+            existing_app_data = existing_data[app_name]["data"]
+            changes_detected = False
+            for key in extracted_data:
+                if extracted_data[key] != existing_app_data.get(key, "N/A"):
+                    changes_detected = True
+                    break
 
-            # If any of the required fields are "N/A" or if last_updated differs
-            if (existing_last_updated == extracted_last_updated and
-                existing_sha1 != "N/A" and existing_sha256 != "N/A"):
+            if not changes_detected and existing_app_data.get("sha1", "N/A") != "N/A" and existing_app_data.get("sha256", "N/A") != "N/A":
                 logging.info(f"No update for {app_name}.")
-                add_to_combined_xml(app_name, existing_data[app_name]["data"])
+                add_to_combined_xml(app_name, existing_app_data)
             else:
                 logging.info(f"Update detected for {app_name}.")
                 # Use existing SHA values if they are present and not "N/A"
-                if extracted_sha1 == "N/A":
+                if extracted_data.get("sha1", "N/A") == "N/A":
                     download_url = extracted_data.get("latest_download")
                     logging.info(f"Download URL for SHA1: {download_url}")
                     extracted_data["sha1"] = compute_sha1(download_url) if download_url else "N/A"
-                if extracted_sha256 == "N/A":
+                if extracted_data.get("sha256", "N/A") == "N/A":
                     download_url = extracted_data.get("latest_download")
                     logging.info(f"Download URL for SHA256: {download_url}")
                     extracted_data["sha256"] = compute_sha256(download_url) if download_url else "N/A"
