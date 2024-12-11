@@ -24,7 +24,7 @@ jobs:
 
       - name: Run update script
         run: |
-          python3 .github/actions/generate_standalone_latest.py
+          python3 .github/actions/generate_macos_standalone_latest.py
 
       - name: Commit changes (if any)
         env:
@@ -32,6 +32,6 @@ jobs:
         run: |
           git config --global user.name 'cocopuff2u'
           git config --global user.email 'cocopuff2u@yahoo.com'
-          git add latest.xml latest.yaml
-          git commit -m "Auto updating app XML and YAML files" || echo "No changes to commit"
+          git add latest_raw_files/macos_standalone_latest.xml latest_raw_files/macos_standalone_latest.yaml latest_raw_files/macos_standalone_latest.json
+          git commit -m "Auto updating app XML, YAML, JSON files" || echo "No changes to commit"
           git push https://github-actions[bot]:$TOKEN@github.com/cocopuff2u/macadmins_msft.git

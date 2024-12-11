@@ -7,6 +7,7 @@ from xml.dom.minidom import parseString
 import pytz
 import yaml
 from collections import defaultdict, OrderedDict
+import os
 
 # Configure logging with a cleaner and more human-readable format
 logging.basicConfig(
@@ -86,6 +87,10 @@ apps = {
     }
 }
 
+# Ensure the output directory exists
+output_dir = "latest_raw_files"
+os.makedirs(output_dir, exist_ok=True)
+
 def fetch_app_data(url):
     logging.info(f"Fetching data from {url}")
     response = requests.get(url)
@@ -106,6 +111,7 @@ def create_xml(apps):
     last_updated.text = get_current_date_time()
 
     for app_name, app_info in apps.items():
+        logging.info("-" * 50)
         logging.info(f"Processing {app_name}")
         app_data = fetch_app_data(app_info["url"])
         package = ET.SubElement(root, "package")
@@ -123,10 +129,11 @@ def create_xml(apps):
     dom = parseString(xml_str)
     pretty_xml_as_string = dom.toprettyxml()
 
-    with open("macos_appstore_latest.xml", "w", encoding="utf-8") as f:
+    with open(os.path.join(output_dir, "macos_appstore_latest.xml"), "w", encoding="utf-8") as f:
         f.write(pretty_xml_as_string)
 
-    logging.info("XML file created successfully")
+    logging.info("-" * 50)
+    logging.info(f"XML output generated at: {os.path.join(output_dir, 'macos_appstore_latest.xml')}")
 
 def xml_to_json_and_yaml(xml_file):
     tree = ET.parse(xml_file)
@@ -174,9 +181,9 @@ def xml_to_json_and_yaml(xml_file):
     output_data['packages'] = packages
 
     # Convert to JSON
-    with open("macos_appstore_latest.json", "w", encoding="utf-8") as json_file:
+    with open(os.path.join(output_dir, "macos_appstore_latest.json"), "w", encoding="utf-8") as json_file:
         json.dump(output_data, json_file, indent=4)
-    logging.info("JSON file created successfully")
+    logging.info(f"JSON output generated at: {os.path.join(output_dir, 'macos_appstore_latest.json')}")
 
     # Convert to YAML using PyYAML with OrderedDict
     class OrderedDumper(yaml.Dumper):
@@ -188,9 +195,9 @@ def xml_to_json_and_yaml(xml_file):
 
     yaml.add_representer(OrderedDict, dict_representer, Dumper=OrderedDumper)
 
-    with open("macos_appstore_latest.yaml", "w", encoding="utf-8") as yaml_file:
+    with open(os.path.join(output_dir, "macos_appstore_latest.yaml"), "w", encoding="utf-8") as yaml_file:
         yaml.dump(output_data, yaml_file, Dumper=OrderedDumper, default_flow_style=False, sort_keys=False)
-    logging.info("YAML file created successfully")
+    logging.info(f"YAML output generated at: {os.path.join(output_dir, 'macos_appstore_latest.yaml')}")
 
 create_xml(apps)
-xml_to_json_and_yaml("macos_appstore_latest.xml")
+xml_to_json_and_yaml(os.path.join(output_dir, "macos_appstore_latest.xml"))

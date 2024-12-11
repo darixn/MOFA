@@ -71,7 +71,7 @@ apps = {
             "last_updated": "Date",
             "min_os": "Minimum OS"
         }
-    },    
+    },
     "Word": {
         "url": "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/0409MSWD2019.xml",
         "manual_entries": {
@@ -389,7 +389,7 @@ root = ET.Element("latest")
 last_update_element = ET.SubElement(root, "last_updated")
 last_update_element.text = last_update_date_time  # Value from get_current_date_time()
 
-# Function to read existing XML data from latest.xml
+# Function to read existing XML data from macos_standalone_latest.xml
 def read_existing_xml(filename):
     if not os.path.exists(filename):
         logging.warning(f"File {filename} does not exist.")
@@ -416,12 +416,13 @@ def read_existing_xml(filename):
         logging.error(f"Error reading existing XML from {filename}: {e}")
         return {}
 
-# Read existing data from latest.xml
-existing_data = read_existing_xml("latest.xml")
+# Read existing data from macos_standalone_latest.xml
+existing_data = read_existing_xml("latest_raw_files/macos_standalone_latest.xml")
 
 # Function to fetch and process an app's data (either XML or JSON)
 def fetch_and_process(app_name, config):
     try:
+        logging.info("-" * 50)
         logging.info(f"Fetching data for {app_name} from {config['url']}...")
         response = requests.get(config["url"], allow_redirects=True)
         response.raise_for_status()
@@ -630,13 +631,17 @@ def pretty_print_xml(element):
     return reparsed.toprettyxml(indent="    ")
 
 # Save the updated XML
-output_file = "latest.xml"
+output_file = "latest_raw_files/macos_standalone_latest.xml"
 pretty_xml = pretty_print_xml(root)
+
+# Ensure the directory exists
+os.makedirs(os.path.dirname(output_file), exist_ok=True)
 
 with open(output_file, "w", encoding="utf-8") as f:
     f.write(pretty_xml)
 
-logging.info(f"Combined and prettified XML generated: {output_file}")
+logging.info("-" * 50)
+logging.info(f"XML output generated at: {output_file}")
 
 # Generate and save YAML output in the same order as XML
 yaml_data = {
@@ -647,7 +652,7 @@ yaml_data = {
 # Define the order of fields to match the XML
 field_order = [
     "name",
-    "application_id", 
+    "application_id",
     "application_name",
     "CFBundleVersion",
     "short_version",
@@ -661,11 +666,11 @@ field_order = [
 ]
 
 # Read the XML file
-xml_file = "latest.xml"
+xml_file = "latest_raw_files/macos_standalone_latest.xml"
 if os.path.exists(xml_file):
     tree = ET.parse(xml_file)
     xml_root = tree.getroot()
-    
+
     # Extract packages from XML
     for package in xml_root.findall("package"):
         package_data = {"name": package.find("name").text}
@@ -676,7 +681,10 @@ if os.path.exists(xml_file):
         yaml_data["packages"].append(package_data)
 
 # Save the YAML file
-yaml_output_file = "latest.yaml"
+yaml_output_file = "latest_raw_files/macos_standalone_latest.yaml"
+
+# Ensure the directory exists
+os.makedirs(os.path.dirname(yaml_output_file), exist_ok=True)
 
 # Delete existing YAML file if it exists
 if os.path.exists(yaml_output_file):
@@ -686,4 +694,20 @@ if os.path.exists(yaml_output_file):
 with open(yaml_output_file, "w", encoding="utf-8") as yaml_file:
     yaml.dump(yaml_data, yaml_file, default_flow_style=False, sort_keys=False)
 
-logging.info(f"YAML output generated from XML: {yaml_output_file}")
+logging.info(f"YAML output generated at: {yaml_output_file}")
+
+# Generate and save JSON output in the same order as XML
+json_output_file = "latest_raw_files/macos_standalone_latest.json"
+
+# Ensure the directory exists
+os.makedirs(os.path.dirname(json_output_file), exist_ok=True)
+
+# Delete existing JSON file if it exists
+if os.path.exists(json_output_file):
+    os.remove(json_output_file)
+
+# Write the JSON data to the file
+with open(json_output_file, "w", encoding="utf-8") as json_file:
+    json.dump(yaml_data, json_file, indent=4)
+
+logging.info(f"JSON output generated at: {json_output_file}")
