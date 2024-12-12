@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <latest>
-	<last_updated>December 11, 2024 11:10 PM EST</last_updated>
+	<last_updated>December 12, 2024 03:11 AM EST</last_updated>
 	<package>
 		<name>iOS Microsoft Word</name>
 		<application_name>Microsoft Word</application_name>
@@ -72,11 +72,11 @@ Have an idea? Add to our feature suggestion box at https://aka.ms/onenotefeedbac
 		<name>iOS Microsoft Windows App Mobile</name>
 		<application_name>Link to Windows</application_name>
 		<bundleId>com.microsoft.LinkToWindows</bundleId>
-		<currentVersionReleaseDate>December 11, 2024</currentVersionReleaseDate>
-		<icon_image>https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/aa/fc/28/aafc28b6-39a0-3a96-4dfe-360856ad0180/AppIcon-0-1x_U007ephone-0-0-85-220-0.png/512x512bb.jpg</icon_image>
+		<currentVersionReleaseDate>December 10, 2024</currentVersionReleaseDate>
+		<icon_image>https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/37/64/92/37649291-c761-769b-0f99-48071b3bfc12/AppIcon-0-1x_U007ephone-0-0-85-220-0.png/512x512bb.jpg</icon_image>
 		<minimumOsVersion>16.6</minimumOsVersion>
 		<releaseNotes>Now you can seamlessly share files between your PC and iPhone. You can set up file sharing by linking your iPhone to your Microsoft account.</releaseNotes>
-		<version>1.24112.76</version>
+		<version>1.24112.73</version>
 	</package>
 	<package>
 		<name>iOS Microsoft Defender Security</name>
@@ -118,12 +118,13 @@ https://testflight.apple.com/join/JkU2rh21</releaseNotes>
 		<name>iOS Microsoft Warehouse Management</name>
 		<application_name>Microsoft Warehouse Management</application_name>
 		<bundleId>com.microsoft.WarehouseManagement</bundleId>
-		<currentVersionReleaseDate>December 11, 2024</currentVersionReleaseDate>
-		<icon_image>https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e8/03/5e/e8035edd-1e7f-2c48-8cb4-28f7379987d4/AppIcons-1x_U007emarketing-0-7-0-85-220-0.png/512x512bb.jpg</icon_image>
+		<currentVersionReleaseDate>November 22, 2024</currentVersionReleaseDate>
+		<icon_image>https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/35/b1/6a/35b16a07-34d6-483d-5905-9297ab0a433b/AppIcons-1x_U007emarketing-0-7-0-85-220-0.png/512x512bb.jpg</icon_image>
 		<minimumOsVersion>10.0</minimumOsVersion>
 		<releaseNotes>This version of the Warehouse Management mobile app introduces the following fixes and improvements:
-•Fixed an issue that affected the connection on devices.</releaseNotes>
-		<version>3.0.6</version>
+
+Fixed an issue that affected the Wifi Connection monitor screen.</releaseNotes>
+		<version>3.0.5</version>
 	</package>
 	<package>
 		<name>iOS Microsoft Store Commerce</name>
