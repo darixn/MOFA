@@ -267,3 +267,7 @@ Below are a list of helpful links.
 - **Microsoft 365, Office 365, Excel, PowerPoint, Outlook, OneDrive, OneNote, Teams** are trademarks of Microsoft Corporation.
 - **Mac** and **macOS** are trademarks of Apple Inc.
 - Other names and brands may be claimed as the property of their respective owners.
+
+ <a href="https://trackgit.com">
+<img src="https://us-central1-trackgit-analytics.cloudfunctions.net/token/ping/m4kk2865o4y6sixk54sm" alt="trackgit-views" />
+</a>
