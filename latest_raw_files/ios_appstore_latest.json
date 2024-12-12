@@ -1,5 +1,5 @@
 {
-    "last_updated": "December 11, 2024 03:09 PM EST",
+    "last_updated": "December 11, 2024 07:40 PM EST",
     "packages": [
         {
             "name": "iOS Microsoft Word",
@@ -55,11 +55,11 @@
             "name": "iOS Microsoft OneDrive",
             "application_name": "Microsoft OneDrive",
             "bundleId": "com.microsoft.skydrive",
-            "currentVersionReleaseDate": "December 05, 2024",
-            "icon_image": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/bd/4b/2e/bd4b2ec6-39a4-7939-afcf-42aa28728290/AppIcon-0-1x_U007epad-0-1-0-85-220-0.png/512x512bb.jpg",
+            "currentVersionReleaseDate": "December 11, 2024",
+            "icon_image": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c7/55/b6/c755b640-73d5-6619-3ed9-0354a34bacf0/AppIcon-0-1x_U007epad-0-1-0-85-220-0.png/512x512bb.jpg",
             "minimumOsVersion": "17.0",
             "releaseNotes": "This version of OneDrive supports iOS/iPadOS versions 17 or newer",
-            "version": "16.0.12"
+            "version": "16.0.13"
         },
         {
             "name": "iOS Microsoft Windows App Mobile",
