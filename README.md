@@ -1,6 +1,8 @@
 # **MOFA**
 **M**icrosoft **O**ffice **F**eed for **A**pple
 
+<img src=".github/images/logo_Mofa_NoBackground.png" alt="MOFA Image" width="200">
+
 Welcome to the **MOFA** repository! This centralized and up-to-date resource offers Microsoft Office downloads for macOS, data feeds, along with comprehensive support documentation for Mac administrators. It aims to replace the now-defunct [**MacAdmins.software**](https://macadmins.software), and we would like to extend a special thanks to [**Paul Bowden**](https://github.com/pbowden-msft) for his exceptional contributions to the Mac Admins community.
 
 We encourage active community participation—feel free to fork the repository, ask questions, or contribute additional insights to ensure its ongoing accuracy and usefulness. Together, we can keep this resource thriving for everyone.
@@ -12,7 +14,8 @@ We encourage active community participation—feel free to fork the repository, 
 - **✅ Feature/Improvement:**  Moved all raw files to `/latest_raw_files/` – *Completed!*
 - **✅ Feature/Improvement:** Added JSON Output `/latest_raw_files/` – *Completed!*
 - **✅ Feature/Improvement:**  Add iOS/MacOS AppStore data to `README.md` – *Completed!*
-- **🔄  Feature/Improvement:**  Add `README.md` to `/latest_raw_files/` - *In Progress*
+- **✅ Feature/Improvement:**  Add `README.md` to `/latest_raw_files/` - *Completed!*
+- **🔄 Feature/Improvement:**  Add `README.md` to `/guides/` - *In Progress*
 - **⏸️ Feature/Improvement:** Adding more links/documentation – *Paused* (Community support needed! 🆘)
 - **🚀 Future:** GitHub webpage with custom domain – *Waiting on funding/support 💸*
 
