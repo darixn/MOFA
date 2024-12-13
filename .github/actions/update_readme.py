@@ -125,29 +125,28 @@ def generate_readme_content(global_last_updated, packages, ios_packages, macos_p
     macos_table = generate_macos_table(macos_packages).format(macos_last_updated=macos_last_updated)
 
     content = f"""# **MOFA**
-**M**icrosoft **O**ffice **F**eed for **A**pple
+**M**icrosoft **O**verview **F**eed for **A**pple
 
 <img src=".github/images/logo_Mofa_NoBackground.png" alt="MOFA Image" width="200">
 
-Welcome to the **MOFA** repository! This centralized and up-to-date resource offers Microsoft Office downloads for macOS, data feeds, along with comprehensive support documentation for Mac administrators. It aims to replace the now-defunct [**MacAdmins.software**](https://macadmins.software), and we would like to extend a special thanks to [**Paul Bowden**](https://github.com/pbowden-msft) for his exceptional contributions to the Mac Admins community.
+Welcome to the **MOFA** repository! This resource offers Microsoft Office downloads for macOS, comprehensive data feeds for all iOS, Mac App Store, and other Microsoft apps, along with tools and documentation links to help Mac admins manage and repair Microsoft products on Apple platforms. Feeds are automatically updated every 4 hours from XML and JSON links directly from Microsoft.
 
-We encourage active community participation—feel free to fork the repository, ask questions, or contribute additional insights to ensure its ongoing accuracy and usefulness. Together, we can keep this resource thriving for everyone.
+Building on the legacy of the now-defunct [**MacAdmins.software**](https://macadmins.software), MOFA provides a comprehensive and up-to-date solution. Special thanks to [**Paul Bowden**](https://github.com/pbowden-msft) for his exceptional contributions to the Mac Admins community.
+
+We welcome community contributions—fork the repository, ask questions, or share insights to help keep this resource accurate and useful for everyone.
 
 ### 🌟 **Current Focus Areas**
 
-- **✅ Feature/Improvement:** Automated `/latest_raw_files/` & `README.md` (Checks every 4 hours with Microsoft sources) – *Completed!*
-- **✅ Feature/Improvement:**  Added iOS/MacOS AppStore `/latest_raw_files/` – *Completed!*
-- **✅ Feature/Improvement:**  Moved all raw files to `/latest_raw_files/` – *Completed!*
-- **✅ Feature/Improvement:** Added JSON Output `/latest_raw_files/` – *Completed!*
-- **✅ Feature/Improvement:**  Add iOS/MacOS AppStore data to `README.md` – *Completed!*
-- **✅ Feature/Improvement:**  Add `README.md` to `/latest_raw_files/` - *Completed!*
-- **🔄 Feature/Improvement:**  Add `README.md` to `/guides/` - *In Progress*
-- **⏸️ Feature/Improvement:** Adding more links/documentation – *Paused* (Community support needed! 🆘)
-- **🚀 Future:** GitHub webpage with custom domain – *Waiting on funding/support 💸*
-
-I’m not here to make a profit—just here to ensure knowledge remains open and free for all, check the button below to support MOFA:
-
-<a href="https://www.buymeacoffee.com/cocopuff2u"><img src="https://img.buymeacoffee.com/button-api/?text=Support This Project&emoji=💻&slug=cocopuff2u&button_colour=FFDD00&font_colour=000000&font_family=Bree&outline_colour=000000&coffee_colour=ffffff" style="height: 40px;" /></a>
+- **✅ Completed:** Automated `/latest_raw_files/` & `README.md` (Updated every 4 hours with Microsoft sources)
+- **✅ Completed:** Integrated iOS/macOS App Store `/latest_raw_files/`
+- **✅ Completed:** Migrated all raw files to `/latest_raw_files/`
+- **✅ Completed:** Added JSON output to `/latest_raw_files/`
+- **✅ Completed:** Included iOS/macOS App Store data in `README.md`
+- **✅ Completed:** Added `README.md` to `/latest_raw_files/`
+- **⏸️ Paused:** Add `README.md` to `/guides/`
+- **⏸️ Paused:** Expanding links/documentation (Community support needed! 🆘)
+- **🔄 In Progress:** Launching GitHub webpage with custom domain
+- **🚀 Future Goal:** Expanding data feeds and incorporating historical data (Pending website updates)
 
 ## <img src=".github/images/Microsoft_Logo_512px.png" alt="Download Image" width="20"></a> Microsoft Standalone Packages
 
@@ -320,7 +319,11 @@ Fork the repository, make your changes, and submit a pull request—every contri
 Help us improve! Share your ideas and suggestions in the [GitHub Discussions](https://github.com/cocopuff2u/macadmins_msft/discussions) or via email.
 
 ### 🌟 **Support the Project**
-Any contributions to this project go toward building a fully-featured URL for this site or are shared with the Mac Admins community to keep information accessible for everyone. If you’re feeling generous, you can also support the project by donating to my coffee fund.
+Your contributions directly support the costs of securing a domain name for the upcoming site, with the remainder donated to the Mac Admins community. This project isn’t about profit—it's about giving back to the community and covering minor expenses to make this resource more accessible.  
+
+If you’re feeling extra generous, leave a note to let me know your support is for my coffee fund—it’s always appreciated! Check the button below to support MOFA:
+
+<a href="https://www.buymeacoffee.com/cocopuff2u"><img src="https://img.buymeacoffee.com/button-api/?text=Support This Project&emoji=💻&slug=cocopuff2u&button_colour=FFDD00&font_colour=000000&font_family=Bree&outline_colour=000000&coffee_colour=ffffff" style="height: 40px;" /></a>
 
 ## **Helpful Links**
 
