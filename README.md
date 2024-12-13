@@ -258,7 +258,7 @@ Your contributions directly support the costs of securing a domain name for the 
 
 If you’re feeling extra generous, leave a note to let me know your support is for my coffee fund—it’s always appreciated! Check the button below to support MOFA:
 
-<a href="https://www.buymeacoffee.com/cocopuff2u" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="cocopuff2u" data-color="#5F7FFF" data-emoji="💻" data-font="Cookie" data-text="Support This Project" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
 
 ## **Helpful Links**
 
