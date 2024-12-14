@@ -1,15 +1,15 @@
 {
-    "last_updated": "December 13, 2024 07:39 PM EST",
+    "last_updated": "December 13, 2024 11:09 PM EST",
     "packages": [
         {
             "name": "iOS Microsoft Word",
             "application_name": "Microsoft Word",
             "bundleId": "com.microsoft.Office.Word",
-            "currentVersionReleaseDate": "December 09, 2024",
-            "icon_image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/20/4a/68/204a68e5-dd25-77c4-beb6-ad614fe06c20/AppIcon-0-0-1x_U007epad-0-1-0-0-sRGB-0-0-0-85-220.png/512x512bb.jpg",
+            "currentVersionReleaseDate": "December 13, 2024",
+            "icon_image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/5e/d8/80/5ed880c9-150c-6288-3f39-4407480478dc/AppIcon-0-0-1x_U007epad-0-1-0-0-sRGB-0-0-0-85-220.png/512x512bb.jpg",
             "minimumOsVersion": "17.0",
             "releaseNotes": "\u2022 Bug fixes",
-            "version": "2.92"
+            "version": "2.92.1"
         },
         {
             "name": "iOS Microsoft Excel",
@@ -25,11 +25,11 @@
             "name": "iOS Microsoft PowerPoint",
             "application_name": "Microsoft PowerPoint",
             "bundleId": "com.microsoft.Office.Powerpoint",
-            "currentVersionReleaseDate": "December 09, 2024",
-            "icon_image": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f9/dd/1c/f9dd1cd2-f647-c165-f76e-e34a64e50ab6/AppIcon-0-0-1x_U007epad-0-1-0-0-sRGB-0-0-0-85-220.png/512x512bb.jpg",
+            "currentVersionReleaseDate": "December 13, 2024",
+            "icon_image": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/66/93/06/669306e5-e88c-7e5c-714b-e3fe46debaaa/AppIcon-0-0-1x_U007epad-0-1-0-0-sRGB-0-0-0-85-220.png/512x512bb.jpg",
             "minimumOsVersion": "17.0",
             "releaseNotes": "\u2022 Bug fixes",
-            "version": "2.92"
+            "version": "2.92.1"
         },
         {
             "name": "iOS Microsoft Outlook",
