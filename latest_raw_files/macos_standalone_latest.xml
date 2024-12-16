@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <latest>
-    <last_updated>December 16, 2024 11:20 AM EST</last_updated>
+    <last_updated>December 16, 2024 03:18 PM EST</last_updated>
     <package>
         <name>Microsoft Office Suite</name>
         <application_id>Data sourced from Excel (not manually specified)</application_id>
@@ -106,7 +106,7 @@
         <CFBundleVersion>com.microsoft.onedrive</CFBundleVersion>
         <short_version>24.221.1103</short_version>
         <full_version>1103.0003</full_version>
-        <last_updated>December 16, 2024 11:20 AM EST</last_updated>
+        <last_updated>December 16, 2024 03:18 PM EST</last_updated>
         <min_os>N/A</min_os>
         <update_download>https://oneclient.sfx.ms/Mac/Installers/24.221.1103.0003/OneDrive.pkg</update_download>
         <latest_download>https://oneclient.sfx.ms/Mac/Installers/24.221.1103.0003/OneDrive.pkg</latest_download>
@@ -216,14 +216,14 @@
         <application_id>MSRD10</application_id>
         <application_name>Windows App.app</application_name>
         <CFBundleVersion>com.microsoft.windows.app</CFBundleVersion>
-        <short_version>11.0.7</short_version>
-        <full_version>2452</full_version>
-        <last_updated>November 19, 2024</last_updated>
+        <short_version>11.0.8</short_version>
+        <full_version>2481</full_version>
+        <last_updated>December 13, 2024</last_updated>
         <min_os>12.0</min_os>
-        <update_download>https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Windows_App_11.0.7_updater.pkg</update_download>
+        <update_download>https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Windows_App_11.0.8_updater.pkg</update_download>
         <latest_download>https://go.microsoft.com/fwlink/?linkid=868963</latest_download>
-        <sha1>b725a983227a62e782190254a26211517fffaafc</sha1>
-        <sha256>9e4fbd4d82cbede7a26d442267e660ea68245733ce5ac9717d694346bc09fef3</sha256>
+        <sha1>147b25ab50b66905d2c840710bbece2070e924ae</sha1>
+        <sha256>bc75dc40b5890b3f5804bc96a81e4285fe25eb5e3bfae7a6a335f008dcb4ff14</sha256>
     </package>
     <package>
         <name>Visual</name>
