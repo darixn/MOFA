@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <latest>
-	<last_updated>December 17, 2024 11:10 PM EST</last_updated>
+	<last_updated>December 18, 2024 03:11 AM EST</last_updated>
 	<package>
 		<name>iOS Microsoft Word</name>
 		<application_name>Microsoft Word</application_name>
@@ -82,18 +82,18 @@ Have an idea? Add to our feature suggestion box at https://aka.ms/onenotefeedbac
 		<name>iOS Microsoft Defender Security</name>
 		<application_name>Microsoft Defender: Security</application_name>
 		<bundleId>com.microsoft.scmx</bundleId>
-		<currentVersionReleaseDate>December 04, 2024</currentVersionReleaseDate>
-		<icon_image>https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/db/d5/10/dbd510ba-48d9-9c99-11f0-879e8fe87373/AppIcon-0-1x_U007emarketing-0-7-0-85-220-0.png/512x512bb.jpg</icon_image>
+		<currentVersionReleaseDate>December 18, 2024</currentVersionReleaseDate>
+		<icon_image>https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/71/af/27/71af2765-64b9-d792-5bbf-e910e3956d65/AppIcon-0-1x_U007emarketing-0-7-0-85-220-0.png/512x512bb.jpg</icon_image>
 		<minimumOsVersion>15.0</minimumOsVersion>
-		<releaseNotes>Bug fixes and improvements</releaseNotes>
-		<version>1.1.60010102</version>
+		<releaseNotes>Bug fixes and Improvements</releaseNotes>
+		<version>1.1.60100101</version>
 	</package>
 	<package>
 		<name>iOS Microsoft Copilot</name>
 		<application_name>Microsoft Edge: AI Browser</application_name>
 		<bundleId>com.microsoft.msedge</bundleId>
-		<currentVersionReleaseDate>December 10, 2024</currentVersionReleaseDate>
-		<icon_image>https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a6/41/1c/a6411c8e-38ca-c7b7-3ecc-46c3af939fb0/AppIcon-0-1x_U007epad-0-0-0-0-0-0-0-85-220-0.png/512x512bb.jpg</icon_image>
+		<currentVersionReleaseDate>December 18, 2024</currentVersionReleaseDate>
+		<icon_image>https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7a/ea/34/7aea34a8-f54b-9375-3858-9bdf586896fa/AppIcon-0-1x_U007epad-0-0-0-0-0-0-0-85-220-0.png/512x512bb.jpg</icon_image>
 		<minimumOsVersion>16.0</minimumOsVersion>
 		<releaseNotes>Welcome to Microsoft Edge! Check out what's new in this release:
 • Direct PDF Viewing: You can now view PDFs directly within the tab without needing to download them first.
@@ -102,7 +102,7 @@ Have an idea? Add to our feature suggestion box at https://aka.ms/onenotefeedbac
 Upgrade to the latest version and enjoy a smarter, more efficient Microsoft Edge!
 Want early access to more new features? Join our Beta program at: 
 https://testflight.apple.com/join/JkU2rh21</releaseNotes>
-		<version>131.2903.92</version>
+		<version>131.2903.107</version>
 	</package>
 	<package>
 		<name>iOS Microsoft Loop</name>
@@ -217,8 +217,8 @@ This wouldn't be possible without your feedback. If you run into any issues, ple
 		<name>iOS Microsoft Edge AI Browser</name>
 		<application_name>Microsoft Edge: AI Browser</application_name>
 		<bundleId>com.microsoft.msedge</bundleId>
-		<currentVersionReleaseDate>December 10, 2024</currentVersionReleaseDate>
-		<icon_image>https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a6/41/1c/a6411c8e-38ca-c7b7-3ecc-46c3af939fb0/AppIcon-0-1x_U007epad-0-0-0-0-0-0-0-85-220-0.png/512x512bb.jpg</icon_image>
+		<currentVersionReleaseDate>December 18, 2024</currentVersionReleaseDate>
+		<icon_image>https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7a/ea/34/7aea34a8-f54b-9375-3858-9bdf586896fa/AppIcon-0-1x_U007epad-0-0-0-0-0-0-0-85-220-0.png/512x512bb.jpg</icon_image>
 		<minimumOsVersion>16.0</minimumOsVersion>
 		<releaseNotes>Welcome to Microsoft Edge! Check out what's new in this release:
 • Direct PDF Viewing: You can now view PDFs directly within the tab without needing to download them first.
@@ -227,7 +227,7 @@ This wouldn't be possible without your feedback. If you run into any issues, ple
 Upgrade to the latest version and enjoy a smarter, more efficient Microsoft Edge!
 Want early access to more new features? Join our Beta program at: 
 https://testflight.apple.com/join/JkU2rh21</releaseNotes>
-		<version>131.2903.92</version>
+		<version>131.2903.107</version>
 	</package>
 	<package>
 		<name>iOS Microsoft Seeing AI</name>
