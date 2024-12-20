@@ -150,14 +150,18 @@ with open(output_file, 'w') as f:
     f.write(pretty_xml_str)
 logging.info('XML data written to file: %s', output_file)
 
-# Convert parsed data to JSON
+# Ensure the JSON file is deleted before writing new data
 json_output_file = 'latest_raw_files/mac_standalone_cve_history.json'
+if os.path.exists(json_output_file):
+    os.remove(json_output_file)
 with open(json_output_file, 'w') as f:
     json.dump(parsed_data, f, indent=4)
 logging.info('JSON data written to file: %s', json_output_file)
 
-# Convert parsed data to YAML
+# Ensure the YAML file is deleted before writing new data
 yaml_output_file = 'latest_raw_files/mac_standalone_cve_history.yaml'
+if os.path.exists(yaml_output_file):
+    os.remove(yaml_output_file)
 with open(yaml_output_file, 'w') as f:
     yaml.dump(parsed_data, f, default_flow_style=False)
 logging.info('YAML data written to file: %s', yaml_output_file)
