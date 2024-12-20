@@ -7,6 +7,7 @@ from datetime import datetime
 import pytz
 import json
 import yaml
+import os
 
 # Configure logging with a cleaner and more human-readable format
 logging.basicConfig(
@@ -110,6 +111,12 @@ last_scan_date = datetime.now(pytz.timezone('US/Eastern')).strftime('%B %d, %Y %
 last_scan_elem = ET.SubElement(root, 'last_scan_date')
 last_scan_elem.text = last_scan_date
 
+# Add last_scan_date to parsed_data
+parsed_data_with_date = {
+    'last_scan_date': last_scan_date,
+    'updates': parsed_data
+}
+
 # Loop through each section and build the XML structure
 for section in parsed_data:
     update_elem = ET.SubElement(root, 'Update')
@@ -155,7 +162,7 @@ json_output_file = 'latest_raw_files/mac_standalone_cve_history.json'
 if os.path.exists(json_output_file):
     os.remove(json_output_file)
 with open(json_output_file, 'w') as f:
-    json.dump(parsed_data, f, indent=4)
+    json.dump(parsed_data_with_date, f, indent=4)
 logging.info('JSON data written to file: %s', json_output_file)
 
 # Ensure the YAML file is deleted before writing new data
@@ -163,5 +170,5 @@ yaml_output_file = 'latest_raw_files/mac_standalone_cve_history.yaml'
 if os.path.exists(yaml_output_file):
     os.remove(yaml_output_file)
 with open(yaml_output_file, 'w') as f:
-    yaml.dump(parsed_data, f, default_flow_style=False)
+    yaml.dump(parsed_data_with_date, f, default_flow_style=False)
 logging.info('YAML data written to file: %s', yaml_output_file)
